@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Подсчёт посетителей в магазине</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        #resultImage { max-width: 80%; margin-top: 20px; }
+        button { padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Загрузите фото из магазина</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="processImage()">Анализировать</button>
+    <div>
+        <img id="resultImage" style="display: none;">
+        <p id="stats"></p>
+    </div>
+
+    <script>
+        async function processImage() {
+            const file = document.getElementById('imageInput').files[0];
+            if (!file) return alert("Выберите фото!");
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            try {
+                const response = await fetch('/process', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                const imgElement = document.getElementById('resultImage');
+                imgElement.src = data.image_url + '?t=' + Date.now();
+                imgElement.style.display = 'block';
+                document.getElementById('stats').innerText = `Посетителей: ${data.count}`;
+            } catch (error) {
+                alert("Ошибка: " + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>История посещений</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+        img { max-width: 200px; }
+    </style>
+</head>
+<body>
+    <h1>История подсчётов</h1>
+    <table>
+        <tr>
+            <th>Дата</th>
+            <th>Количество</th>
+            <th>Фото</th>
+        </tr>
+        {% for record in history %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td><img src="{{ record[2] }}"></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Назад</a>
+</body>
+</html>

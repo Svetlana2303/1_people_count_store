@@ -1,0 +1,18 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 604-232-315
+INFO:root:Начало обработки в 2025-07-20 10:05:19.406313
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:05:23] "POST /process HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:05:23] "GET /static/result_c89df2fa4eaa4f45a9b024ab17b544f1.jpg?t=1752995123644 HTTP/1.1" 200 -
+INFO:root:Начало обработки в 2025-07-20 10:05:40.512287
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:05:40] "POST /process HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:05:40] "GET /static/result_3170cd96ad7d4d0bb5382de82dd0ea1e.jpg?t=1752995140934 HTTP/1.1" 200 -
+INFO:root:Начало обработки в 2025-07-20 10:05:51.502527
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:05:51] "POST /process HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:05:51] "GET /static/result_e7b9d79635fb4b2593a7fd2ab40960b4.jpg?t=1752995151956 HTTP/1.1" 200 -
+INFO:root:Начало обработки в 2025-07-20 10:06:01.418153
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:06:02] "POST /process HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Jul/2025 10:06:02] "GET /static/result_74487470ec89429492804e4b89294dbe.jpg?t=1752995162049 HTTP/1.1" 200 -
